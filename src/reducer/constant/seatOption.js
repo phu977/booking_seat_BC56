@@ -1,3 +1,4 @@
 export let CHOOSE_SEAT = "CHOOSE_SEAT";
 export let DELETE_SEAT = " DELETE_SEAT";
 export let PAY_SEAT = "PAY_SEAT";
+export let ClEAN_CHOOSE_SEAT_RENDER = "ClEAN_CHOOSE_SEAT_RENDER";

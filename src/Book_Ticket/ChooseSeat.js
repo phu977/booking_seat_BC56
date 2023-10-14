@@ -1,6 +1,10 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { DELETE_SEAT, PAY_SEAT } from "../reducer/constant/seatOption";
+import {
+  ClEAN_CHOOSE_SEAT_RENDER,
+  DELETE_SEAT,
+  PAY_SEAT,
+} from "../reducer/constant/seatOption";
 
 export default function ChooseSeat() {
   let ChooseSeat = useSelector((state) => {
@@ -61,6 +65,9 @@ export default function ChooseSeat() {
   let handlePaySeat = () => {
     dispatch({
       type: PAY_SEAT,
+    });
+    dispatch({
+      type: ClEAN_CHOOSE_SEAT_RENDER,
     });
   };
 

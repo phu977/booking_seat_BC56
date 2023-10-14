@@ -1,6 +1,11 @@
 import { message } from "antd";
 import { arrSeat } from "../Book_Ticket/Data/Data";
-import { CHOOSE_SEAT, DELETE_SEAT, PAY_SEAT } from "./constant/seatOption";
+import {
+  CHOOSE_SEAT,
+  ClEAN_CHOOSE_SEAT_RENDER,
+  DELETE_SEAT,
+  PAY_SEAT,
+} from "./constant/seatOption";
 
 const initialState = {
   DanhSach: [...arrSeat],
@@ -36,6 +41,9 @@ export let seat = (state = initialState, { type, payload }) => {
       });
       message.success("thanh toán thành công");
       return { ...state, DanhSach: updatedDanhSach, paySeat: state.ChooseSeat };
+    }
+    case ClEAN_CHOOSE_SEAT_RENDER: {
+      return { ...state, ChooseSeat: [] };
     }
     default:
       return state;
