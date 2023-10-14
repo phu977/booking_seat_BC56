@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { DELETE_SEAT } from "../reducer/constant/seatOption";
+import { DELETE_SEAT, PAY_SEAT } from "../reducer/constant/seatOption";
 
 export default function ChooseSeat() {
   let ChooseSeat = useSelector((state) => {
@@ -58,6 +58,12 @@ export default function ChooseSeat() {
     );
   };
 
+  let handlePaySeat = () => {
+    dispatch({
+      type: PAY_SEAT,
+    });
+  };
+
   return (
     <div>
       <strong className="text-white text-align-center">Choose Seat</strong>
@@ -72,6 +78,9 @@ export default function ChooseSeat() {
         <tbody>
           {renderListPaySeat()}
           {renderTotal()}
+          <button className="btn btn-info text-center" onClick={handlePaySeat}>
+            Pay Seat
+          </button>
         </tbody>
       </table>
     </div>

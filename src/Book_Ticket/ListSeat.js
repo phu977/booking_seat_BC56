@@ -41,7 +41,7 @@ export default function ListSeat() {
                   }}
                   className={`ghe ${
                     ChooseSeat.includes(seat) ? "gheDangChon" : ""
-                  }`}
+                  } ${seat.daDat === true ? "gheDuocChon" : ""}`}
                 >
                   {seat.soGhe}
                 </div>
